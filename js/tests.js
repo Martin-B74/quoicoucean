@@ -1,5 +1,5 @@
-let text=  {
-    "slide1": {
+let text=  [
+    {
       "phrase_dame": "La phrase de la dame",
       "answers": [
         "Réponse 1",
@@ -10,7 +10,7 @@ let text=  {
       "correct": 1,
       "phrase_dame_2": "La phrase de la dame 2"
     },
-    "slide2": {
+    {
       "phrase_dame": "La phrase de la dame",
       "answers": [
         "Réponse 1",
@@ -21,4 +21,4 @@ let text=  {
       "correct": 2,
       "phrase_dame_2": "La phrase de la dame 2"
     },
-  }
+]
