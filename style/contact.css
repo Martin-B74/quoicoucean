@@ -15,12 +15,7 @@ body{
 header{
     display: flex;
     gap: 1rem;
-}
-
-header img{
-    width: 70%;
-    /* crop 30 % to the right */
-    clip-path: inset(0 30% 0 0);
+    margin: 1rem;
 }
 
 header nav{
@@ -35,4 +30,105 @@ header nav a{
     font-family: "Koulen", sans-serif;
     font-weight: 500;
     font-size: 22pt;
+}
+
+main{
+    color: white;
+    margin: 1rem;
+}
+
+h1{
+    font-family: "Koulen", sans-serif;
+    font-size: 32pt;
+    text-align: center;
+}
+
+.formNames{
+    font-family: "Koulen", sans-serif;
+    font-size: 16pt;
+}
+
+.formNames:not(:first-child){
+    margin-top: 1rem;
+}
+
+.nameDiv{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 1rem;
+}
+
+.firstNameLine{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.firstName{
+    margin-right: 0.2rem;
+}
+
+.formFirstName{
+    margin-top: 1rem;
+}
+
+.firstNameDiv{
+    color: black;
+}
+
+.birthDateMainDiv{
+    display: flex;
+    gap: 3rem;
+}
+
+.birday{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.birday p{
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+
+.btnOp{
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.innerBirday{
+    display: flex;
+    gap: 1rem;
+}
+
+.innerBirday p{
+    margin: 0;
+}
+
+#email, #message{
+    width: 25%;
+}
+
+.validationButtonsDiv{
+    margin-top: 1rem;
+}
+
+.little-button{
+    font-size: 6pt !important;
+}
+
+.big-button{
+    font-size: 16pt !important;
+}
+
+#modalResult{
+    color: black  !important;
+}
+
+.linkContact{
+    text-decoration: underline;
 }
