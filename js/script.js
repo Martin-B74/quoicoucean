@@ -17,17 +17,20 @@ const displayText = (text) => {
 //Set up the text for the given slide index
 const displayQuestion = (slideIndex) => {
   let slideText = getDameTextContainer(slideIndex);
-  slideText.textContent = text[slideIndex].phrase_dame_1;
-  text[slideIndex].answers.forEach((answer, index) => {
-    document.querySelector('#popup_question label#label_q'+index).textContent = answer;
-    document.querySelector('#popup_question input[type="radio"]#q'+index).value = index;
+  slideText.textContent = getSlideData(slideIndex).phrase_dame;
+  getSlideData(slideIndex).answers.forEach((answer, index) => {
+    document.querySelector('#pop_question label#label_q'+(index+1)).textContent = answer;
+    document.querySelector('#pop_question input[type="radio"]#q'+(index+1)).value = index;
   });
 }
 
+const getSlideData = (slideIndex)=>{
+  return text[slideIndex];
+}
 
 const checkAnswer = (slideIndex) => {
   const answer = document.querySelector('popup_question input[type="radio"]:checked').value;
-  const correctAnswer = text[slideIndex].correct;
+  const correctAnswer = getSlideData(slideIndex).correct;
   if (answer === correctAnswer) {
     console.log('Correct!');
   } else {
