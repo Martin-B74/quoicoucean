@@ -1,0 +1,11 @@
+.image_femme img{
+    height : 300px;
+}
+
+
+body{
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background: radial-gradient(12rem at 70%, #fff, var(--lightBlue));
+}
