@@ -24,14 +24,14 @@ const displayQuestion = (slideIndex) => {
   });
 }
 
-const getSlideData = (slideIndex)=>{
-  return text[slideIndex];
+const getSlideData = (slideIndex) => {
+  return text[slideIndex-1];
 }
 
 const checkAnswer = (slideIndex) => {
-  const answer = document.querySelector('popup_question input[type="radio"]:checked').value;
+  const answer = document.querySelector('#pop_question input[type="radio"]:checked').value;
   const correctAnswer = getSlideData(slideIndex).correct;
-  if (answer === correctAnswer) {
+  if (answer == correctAnswer) {
     console.log('Correct!');
   } else {
     console.log('Incorrect!');
