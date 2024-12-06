@@ -136,3 +136,10 @@ h1{
 .capchat{
     margin-top: 1rem;
 }
+
+footer{
+    background-color: #2A2A72;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
