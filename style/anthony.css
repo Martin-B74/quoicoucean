@@ -55,3 +55,23 @@ input:checked + .slider {
 input:checked + .slider::before {
     transform: translateX(25px);
 }
+
+.bodyBeach{
+    background: url(../img/beach.png) no-repeat center center/cover;
+}
+
+.sun img{
+    width: 200px;
+}
+
+.sun{
+    position: fixed;
+    top: -6%;
+    right: -4%;
+}
+
+#slide1{
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+}
