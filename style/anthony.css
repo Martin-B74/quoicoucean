@@ -105,3 +105,21 @@ body{
     bottom: 5%;
     left: 5%;
 }
+
+#pop_question{
+    background-color: #D2EFF6;
+    border-radius: 20px;
+    padding: 18px;
+    height : max-content;
+    text-align: center;
+    margin-top : 10%;
+    position: fixed;
+    margin-left : 20px;
+    bottom: 2%;
+    right: 2%;
+    display: none;
+}
+
+.pop_question_show{
+    display: block;
+}
