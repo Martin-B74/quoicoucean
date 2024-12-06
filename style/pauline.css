@@ -70,12 +70,21 @@ body{
 .home-top{
     background: url(../img/bateau-pirate.jpg) no-repeat center center/cover;
     height: 100vh;
+    display : flex;
+    flex-direction: row-reverse;
 }
 
 
 .home-top img{
     width: 150px;
 }
+.home-top img:nth-child(2){
+    width: 300px;
+    margin-top : 0;
+    flex:none;
+}
+
+
 footer{
     background-color: #2A2A72;
     padding: 20px;
