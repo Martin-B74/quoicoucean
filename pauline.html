@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/pauline.css">
+    <style>
+        @font-face {
+            font-family: "Braille";
+            src: url(font/BRAILLE.ttf) format('truetype');
+        }
+
+        body {
+            background-image: url("img/fond.png") no-repeat center center fixed;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="capcha.html">Capcha</a></li>
+                <li><a href="clicker.html">Clicker</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <label class="switch_font">Police adaptée aux malvoyants
+        <input type="checkbox" id="fontToggle" onclick="fontToggle()">
+        <span class="slider"></span>
+    </label>
+
+    <div class="home-top">
+        <img src="./img/homme.svg" alt="">
+        <!-- <img src="./img/dialogue1.svg" alt=""> -->
+         <div class="chat_bubble">Bienvenue sur notre projet pour <br> la Nuit de l'Info 2024  vous pourrez y trouver <br> toutes nos contributions au différents défis!! </div>
+    </div>
+     <div class="animate_bubble">
+         <img class="bubble" src="./img/bubble.png" alt=""> 
+         <img class="bubble" src="./img/bubble.png" alt="">
+         <img class="bubble" src="./img/bubble.png" alt="">
+         <img class="bubble" src="./img/bubble.png" alt="">
+         <img class="bubble" src="./img/bubble.png" alt=""> 
+         <img class="bubble" src="./img/bubble.png" alt="">
+         <img class="bubble" src="./img/bubble.png" alt="">
+         <img class="bubble" src="./img/bubble.png" alt="">
+         
+         <div class="grid2-2">
+            <div class="bloc">
+                <div class="flex">
+                    <img src="./img/crabby.png" alt="">
+                    <h2>Maladie et pollution</h2>
+                </div>
+                <p>Peut-on faire un parallèle entre les maladies humaines et la pollution marine</p>
+                <a href="maladie.html">En apprendre plus sur la pollution marine</a>
+             </div>
+
+
+
+            <div class="bloc">
+                <div class="flex">
+                    <img src="./img/crabby.png" alt="">
+                    <h2>Respiration humaine vs océanique</h2>
+                </div>
+                <p>
+                    Quelles différences y-a-t'il entre la respiration des Hommes le l'absorption de l'oxygène par l'océan ?
+                </p>
+                <a href="respiration.html">Je veux en savoir plus</a>
+            </div>
+
+
+
+            <div class="bloc">
+                <div class="flex">
+                    <img src="./img/crabby.png" alt="">
+                    <h2>L'acidification</h2>
+                </div>
+                <p>L'acidification est un phénomène connu chez les humains qu'en est il de l'acidification des océans</p>
+                <a href="acidification.html">En savoir plus sur l'acidification des océans</a>
+            </div>
+
+
+            <div class="bloc">
+                <div class="flex">
+                    <img src="./img/crabby.png" alt="">
+                    <h2>Les Cycles</h2>
+                </div>
+                <p>Toute vie s'articule autour de cycle, venez découvrir ce qui rithme la vie marine</p>
+                <a href="cycle.html">En apprendre plus sur les cycles océaniques</a>
+            </div>
+        </div>
+     </div>
+     <footer>
+            <div class="footer">
+                <div class="footer_logo">
+                    <img src="" alt="">
+                </div>
+                <div class="footer_text">
+                    <p>© 2024 Nuit de l'informatique - Equipe Quoicoudev</p>
+                </div>
+            </div>
+     </footer>
+</body>
+<script src="/js/animation.js"></script>
+</html>

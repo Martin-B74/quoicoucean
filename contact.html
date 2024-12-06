@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacter nous | Quoicoucean</title>
+        <link rel="stylesheet" href="./style/contact.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <header>
+            <a href="/"
+                ><img
+                    src="./img/logo_50_perc.png"
+                    alt="Logo of Race for sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW"
+            /></a>
+            <nav>
+                <a href="/game">Jeux</a>
+                <a href="/contact.html" class="linkContact">Nous contacter</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Nous contacter</h1>
+            <form action="#">
+                <p class="formNames">Votre nom</p>
+                <div class="nameDiv"></div>
+                <p class="formNames">Votre prenom</p>
+                <div class="firstNameDiv"></div>
+                <p class="formNames">Votre date de naissance</p>
+                <div class="birthDateMainDiv">
+                    <div class="monthDiv birday">
+                        <p>Mois</p>
+                        <div class="innerBirday">
+                            <button class="btn btn-secondary minusMonth btnOp">
+                                -
+                            </button>
+                            <p class="monthValue">0</p>
+                            <button class="btn btn-secondary addMonth btnOp">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="yearDiv birday">
+                        <p>Année</p>
+                        <div class="innerBirday">
+                            <button class="btn btn-secondary minusYear btnOp">
+                                -
+                            </button>
+                            <p class="yearValue">0</p>
+                            <button class="btn btn-secondary addYear btnOp">+</button>
+                        </div>
+                    </div>
+                    <div class="hourDiv birday">
+                        <p>Heure (en sec)</p>
+                        <div class="innerBirday">
+                            <button class="btn btn-secondary minusHour btnOp">
+                                -
+                            </button>
+                            <p class="hourValue">0</p>
+                            <button class="btn btn-secondary addHour btnOp">+</button>
+                        </div>
+                    </div>
+                    <div class="dayDiv birday">
+                        <p>Jour</p>
+                        <div class="innerBirday">
+                            <button class="btn btn-secondary minusDay btnOp">
+                                -
+                            </button>
+                            <p class="dayValue">0</p>
+                            <button class="btn btn-secondary addDay btnOp">+</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="formNames">Votre email</p>
+                <input
+                    type="password"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    aria-label="Email input"
+                />
+                <p class="formNames">Votre message (en binaire)</p>
+                <input
+                    type="number"
+                    name="message"
+                    id="message"
+                    class="form-control"
+                    aria-label="Message input"
+                    min="0"
+                />
+                <p class="formNames">Veuillez completer ce captcha</p>
+                <iframe src="https://nuit.toastcie.dev/capchat/" frameborder="0" width="980px" height="620" class="capchat"></iframe>
+                <div class="validationButtonsDiv">
+                    <button class="btn btn-danger little-button sendBtn">
+                        Envoyer
+                    </button>
+                    <button type="reset" class="btn btn-success big-button">
+                        Réinitialiser
+                    </button>
+                </div>
+            </form>
+            <div class="modal modalResult" id="modalResult" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Votre formulaire a été envoyé</h5>
+                      <button type="button" class="btn-close" id="modalClose" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p id="modalLastName"></p>
+                      <p id="modalFirstName"></p>
+                      <p id="modalBirthdate"></p>
+                      <p id="modalEmail"></p>
+                      <p id="modalMessage"></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" id="modalCloseBtn" >Fermé</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="footer_logo">
+                    <img src="" alt="">
+                </div>
+                <div class="footer_text">
+                    <p>© 2024 Nuit de l'informatique - Equipe Quoicoudev</p>
+                </div>
+            </div>
+     </footer>
+        <script src="js/contact.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
