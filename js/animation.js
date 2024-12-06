@@ -34,3 +34,12 @@ function animateBubble() {
   // Appeler la fonction quand la page est chargée
   window.onload = animateBubble;
   
+
+  const fontToggle = () => {
+    var currentFont = document.querySelector("body");
+    if (currentFont.style.fontFamily != "Braille") {
+      currentFont.style.fontFamily = "Braille";
+    } else {
+      currentFont.style.fontFamily = "Arial";
+    }
+  }
