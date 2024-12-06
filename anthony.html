@@ -7,8 +7,21 @@
     <title>Document</title>
     <script src="js/tests.js"></script>
     <script src="js/script.js"></script>
+    <style>
+        @font-face {
+            font-family: "Braille";
+            src: url(font/BRAILLE.ttf) format('truetype');
+        }
+    </style>
+
 </head>
 <body>
+    
+    <label class="switch_font">
+        <input type="checkbox" id="fontToggle" onclick="fontToggle()">
+        <span class="slider"></span>
+    </label>
+    
 
     <div id="slide1" class="active">
         <div class="image_femme">

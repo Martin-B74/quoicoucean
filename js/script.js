@@ -33,8 +33,15 @@ const checkAnswer = (slideIndex) => {
   } else {
     console.log('Incorrect!');
   }
-  
 }
 
 
+const fontToggle = () => {
+  var currentFont = document.querySelector("body");
+  if (currentFont.style.fontFamily != "Braille") {
+    currentFont.style.fontFamily = "Braille";
+  } else {
+    currentFont.style.fontFamily = "Arial";
+  }
+}
 
