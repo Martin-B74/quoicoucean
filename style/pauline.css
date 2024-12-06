@@ -163,3 +163,51 @@ footer{
     }
     
 }
+
+.switch_font {
+    position: fixed;
+    color: #FFFFFF; 
+    font-size: 16px;
+    font-weight: bold;
+    top: 10px;
+    right: 30px;
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    z-index: 100;
+}
+
+.switch_font input {
+    display: none; /* Cache complètement la checkbox */
+}
+
+.switch_font .slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.switch_font .slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.switch_font input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.switch_font input:checked + .slider::before {
+    transform: translateX(25px);
+}

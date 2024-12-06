@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/pauline.css">
+    <style>
+        @font-face {
+            font-family: "Braille";
+            src: url(font/BRAILLE.ttf) format('truetype');
+        }
+
+        body {
+            background-image: url("img/fond.png") no-repeat center center fixed;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,6 +29,12 @@
             </ul>
         </nav>
     </header>
+
+    <label class="switch_font">Police adaptée aux malvoyants
+        <input type="checkbox" id="fontToggle" onclick="fontToggle()">
+        <span class="slider"></span>
+    </label>
+
     <div class="home-top">
         <img src="./img/homme.svg" alt="">
         <!-- <img src="./img/dialogue1.svg" alt=""> -->
