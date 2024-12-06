@@ -1,4 +1,3 @@
-let slideIndex = 0;
 
 const updateIndex = () => {
   slideIndex++;
@@ -11,13 +10,16 @@ const getDameTextContainer = (slideIndex) => {
 }
 
 const displayText = (text) => {
-  document.querySelector('.active .phrase_dame').textContent = text;
+  document.querySelector('.active .dame_question').textContent = text;
 }
 
 //Set up the text for the given slide index
 const displayQuestion = (slideIndex) => {
   let slideText = getDameTextContainer(slideIndex);
   slideText.textContent = getSlideData(slideIndex).phrase_dame;
+
+  document.querySelector('.active .question').textContent = getSlideData(slideIndex).question;
+
   getSlideData(slideIndex).answers.forEach((answer, index) => {
     document.querySelector('#pop_question label#label_q'+(index+1)).textContent = answer;
     document.querySelector('#pop_question input[type="radio"]#q'+(index+1)).value = index;
@@ -47,4 +49,10 @@ const fontToggle = () => {
     currentFont.style.fontFamily = "Arial";
   }
 }
+
+
+displayQuestion(slideIndex);
+
+console.log(getSlideData(slideIndex).phrase_dame);  
+displayText(getSlideData(slideIndex).phrase_dame);
 

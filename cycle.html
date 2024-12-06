@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style/anthony.css">
     <title>Nuit de l'Info 2024</title>
-    <script src="js/tests.js"></script>
-    <script src="js/script.js"></script>
     <style>
         @font-face {
             font-family: "Braille";
@@ -14,12 +12,14 @@
         }
     </style>
 
-    <script>
-        let slideIndex = 4
-    </script>
+    
 
 </head>
-<body>
+<body class="bodyBeach">
+
+    <div class="sun">
+        <img src="../img/soleil.png" alt="Soleil">
+    </div>
     
     <label class="switch_font">
         <input type="checkbox" id="fontToggle" onclick="fontToggle()">
@@ -29,11 +29,14 @@
 
     <div id="slide1" class="active">
         <div class="image_femme">
-            <p class="dame_question" data-name="tata"></p>
+            <p class="dame_question chat_bubble" data-name="tata"></p>
             <img src="img/femme_assise.svg" alt="image d'une femme">
         </div>
 
         <div id="pop_question" class="d-none">
+
+            <p class="question"></p>
+
 
             <label for="q1" id="label_q1"></label>
             <input id="q1" type="radio" name="question">
@@ -51,5 +54,10 @@
     </div>
     
     
+    <script>
+        var slideIndex = 4;
+    </script>
+    <script src="js/tests.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

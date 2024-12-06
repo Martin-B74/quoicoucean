@@ -1,9 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .image_femme img{
     height : 300px;
 }
 
 
+.chat_bubble{
+    background-color: #D2EFF6;
+    border-radius: 20px;
+    padding: 18px;
+    height : max-content;
+    text-align: center;
+    margin-top : 10%;
+    position: relative;
+    margin-left : 20px;
+}
+
+.chat_bubble:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #D2EFF6;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    bottom: -20px;
+    left: 10%;
+    
+    transform: translateX(-50%);
+}
+
 body{
+    font-family: 'Roboto', sans-serif;
     height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
