@@ -18,7 +18,7 @@ function animateBubble() {
         bubble.style.transform = `translate(${offsetX}px, ${y}px)`;
   
         // Réinitialisation quand la bulle dépasse le haut
-        if (y < -100) {
+        if (y < 100) {
           y = window.innerHeight + 100; // Remettre en bas
           x = Math.random() * window.innerWidth; // Nouvelle position horizontale aléatoire
           bubble.style.left = `${x}px`; // Appliquer la nouvelle position

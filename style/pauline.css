@@ -49,6 +49,33 @@ body{
     justify-items: center;
 }
 
+
+.chat_bubble{
+    background-color: #D2EFF6;
+    border-radius: 20px;
+    padding: 18px;
+    height : max-content;
+    text-align: center;
+    margin-top : 10%;
+    width: max-content;
+    position: relative;
+}
+
+.chat_bubble:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #D2EFF6;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    bottom: -20px;
+    right: 10%;
+    
+    transform: translateX(-50%);
+}
+
+
 .bloc{
     background-color: #D2EFF6;
     border-radius: 20px;
