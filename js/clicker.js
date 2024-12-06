@@ -3,12 +3,18 @@ const scoreDisplay = document.getElementById('score');
 let score = 0;
 let popups = [];
 const maxPopups = 10;
-let audio = new Audio('../sounds/annoying-sound.mp3');
-audio.volume = 0.01;
+let oof_song = new Audio('../sounds/annoying-sound.mp3');
+oof_song.volume = 0.01;
+let win_song = new Audio('../sounds/win.mp3');
+win_song.volume = 0.1;
 const redirectLink = 'https://nuit.toastcie.dev/game';
 
 function updateScore() {
     scoreDisplay.textContent = score;
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function moveElementSmoothly(element) {
@@ -38,7 +44,7 @@ clicker.addEventListener('click', () => {
     score++;
     updateScore();
     moveElementSmoothly(clicker);
-    audio.play();
+    oof_song.play();
 });
 
 function createPopup(text, link) {
@@ -82,6 +88,44 @@ function spawnPopups() {
     }, 2000);
 }
 
+function stopAllAnimations() {
+    clicker.style.animation = 'none';
+    clicker.style.transition = 'none';
+
+    popups.forEach(popup => {
+        popup.style.animation = 'none';
+        popup.style.transition = 'none';
+    });
+
+}
+
+function displayWinImage() {
+    const overlay = document.createElement('div');
+    overlay.id = 'overlay';
+    document.body.appendChild(overlay);
+
+    const victoryImage = document.createElement('img');
+    victoryImage.src = '../img/win.png';
+    victoryImage.alt = 'Victoire!';
+    victoryImage.id = 'victoryImage';
+    document.body.appendChild(victoryImage);
+
+    const redirectButton = document.createElement('button');
+    redirectButton.id = 'redirectButton';
+    redirectButton.textContent = 'Click!';
+    document.body.appendChild(redirectButton);
+
+    overlay.style.display = 'block';
+    victoryImage.style.display = 'block';
+    redirectButton.style.display = 'block';
+
+    stopAllAnimations();
+
+    redirectButton.addEventListener('click', () => {
+        window.location.href = redirectLink;
+    });
+}
+
 function handleBodyClick(event) {
     if (event.target.closest('.popup')) return;
 
@@ -90,8 +134,10 @@ function handleBodyClick(event) {
         updateScore();
     }
 
-    if (score >= 30) {
-        window.location.href = redirectLink;
+    if (score >= 15) {
+        stopAllAnimations();
+        displayWinImage();
+        win_song.play();
     }
 }
 
